@@ -19,3 +19,16 @@ let string="jubair"
 let arrs=string.split('')
 console.log(arrs.sort().join(''))
 
+//reverse the array using loop:
+
+function reverseArray(arr){
+   const  array=[]
+    for(let i=arr.length-1;i>=0;i--){
+        array.push(arr[i])
+    }
+    return array     
+}
+
+let originalArry=[1,2,3,4,5]
+console.log(reverseArray(originalArry))
+
