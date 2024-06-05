@@ -14,3 +14,8 @@ let srt =[1,2,7,8,9,3,5,4]
 let sort=srt.sort()
 console.log(sort)
 
+//sort an astring in alphabet order:
+let string="jubair"
+let arrs=string.split('')
+console.log(arrs.sort().join(''))
+
