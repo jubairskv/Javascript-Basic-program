@@ -28,7 +28,10 @@ function reverseArray(arr){
     }
     return array     
 }
-
 let originalArry=[1,2,3,4,5]
 console.log(reverseArray(originalArry))
 
+//count a word in the string
+let data="hi this jubair junior frontend developer"
+let sp =data.split(" ")
+console.log(sp.length)
