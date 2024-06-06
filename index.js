@@ -35,3 +35,22 @@ console.log(reverseArray(originalArry))
 let data="hi this jubair junior frontend developer"
 let sp =data.split(" ")
 console.log(sp.length)
+
+//capitilise the 1st letter
+let lett ="i am frontend developer"
+let ans =lett.split(' ')
+ans[0]="I"
+console.log(ans.join(" "))
+
+
+//capitalize the each word 1st letter ass capital
+let strs ="i am frontend developer"
+
+function cap(word){
+    return word.charAt(0).toUpperCase()+word.slice(1)
+}
+let spl =strs.split(" ")
+let ma =spl.map(cap)
+let jo =ma.join(" ")
+console.log(jo)
+
