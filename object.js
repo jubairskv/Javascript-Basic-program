@@ -1,0 +1,84 @@
+
+
+//javascript object
+
+const object ={
+    name:"jubair",
+    father:"kasim",
+    mother:"vagitha banu"
+}
+console.table(object)     //table shows table formate data
+
+let obj =[
+    {
+        Name:"jubair",
+        lastName:"kasim",
+        age:25
+    },
+    {
+        Name:"Salman",
+        lastName:"Kasim",
+        age:27
+    },
+    {
+        Name:"Vagitha banu",
+        lastName:"Kasim",
+        age:55
+    }
+]
+
+obj[0].lastName="Kasim"
+
+
+obj.push({Name:"kasim",lastName:"suliman",age:"expired"})
+obj[3].age="58"
+
+
+console.table(obj[0].Name="Jubair Kasim")
+console.table(obj[0].Name="Jubair")
+console.table(obj)
+let age =obj.filter(e=>e.age<=30)
+console.table(age)
+let name=obj.filter(e=>e.Name==="Jubair" && "Salman" )
+console.table(name)
+
+let names=obj.filter(e=>e.lastName=="Kasim")
+console.table(names)
+
+let it =obj.map(e=>{
+    console.log(e.Name +":" , e.age)
+})
+
+let red =obj.reduce((sum,person)=>sum+person.age)
+console.log(red)
+
+obj[1].Name="Jubair"
+console.table(obj)
+let fil = obj.filter(e=>e.Name=="Jubair")
+console.table(fil)
+
+let del =obj.splice(0,2)
+console.table(obj)
+
+
+let obj2={
+    Name:"jubair",
+    Age:25,
+    DOB:"21/12/199",
+    Add:[
+        {
+            Name:"jubair",
+            Number:1
+        },
+        {
+            Name:"salman",
+            Number:2
+        }
+    ]
+}
+console.table(obj2.Add[0].Name="jubair kasim")
+console.table(obj2)
+
+
+
+
