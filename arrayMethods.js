@@ -125,9 +125,113 @@ let pos = temp.findLastIndex(x => x > 40);
 console.log(pos)
 
 
+//Array Sort method
+//Sort:
+let sr =["b","d","e","f","a","c"]     //it sort the array elment alphabetic
+sr.sort()
+console.log(sr)
+
+//Reverse:
+let re = ["b","c","d","e","a"]        //it reverse the array element
+let reve = re .reverse()
+console.log(reve)
+
+//toSorted:
+const month = ["jan","feb","march","april","may"]   //it is a method as a safe way to sort an array without altering the original array.
+const tos =month.toSorted()
+console.log(tos)
+
+//toReversed:
+const months = ["jan","feb","march","april","may"]  //it is a method as a safe way to reverse an array without altering the original array.
+const tor = months.toReversed();
+console.log(tor)
 
 
+//number sort:
+let points = [40, 100, 1, 5, 25, 10];
+points.sort((a,b)=>a-b)  //ascending order sort a-b     //descending order sort b-a
+console.log(points)
+
+//number reverse
+let po =[1,2,3,4,5,6]
+po.sort((a,b)=>b-a)     //sort by decending order
+console.log(po)
+
+//math.min:
+let min =[1,2,3,4,5,6]
+let minAns=Math.min(...min)      //it return min number
+console.log(minAns)
+
+//math.max:
+let max=[1,2,3,4,5,6]
+let maxAns=Math.max(...max)
+console.log(maxAns)
+
+//Array Iteration methdos:
+//forEach:
+let num =[1,2,3,4,5,6]
+num.forEach((num)=>{  //it return iterator array without creating new array
+console.log(num)
+})
+
+//map:
+let nums=[1,2,3,4,5,6]
+let newData = nums.map((a)=>{    //it return iterator array with creating new array
+  console.log(a)
+})
+
+//flatMap:
+let flatmap = nums.flatMap((a)=>console.log(a))
+
+//filter:
+let filter =nums.filter((a)=>a%2===0)
+console.log(filter)
+
+//reduce:
+let total = nums.reduce((total,value)=>total+value)
+console.log(total)
+
+//every:
+let eve =[1,2,3,4,5,6]                     //checks if all array values are larger than 6:
+let every =eve.every((value)=>value>6)
+console.log(every)
 
 
+//some
+let som =[1,2,3,4,5,6]
+let some =som.some((value)=>value>5)       //checks if some array values are larger than 6:
+console.log(some)
 
 
+//from()
+let strin="jubair"
+let strAns =Array.from(strin)   //it return array of aoject
+console.log(strAns)
+
+//keys:
+let obj = ["a","b","c","d","e"]
+let objAns =obj.keys()              //it return key value for object
+for(let key of objAns){
+  console.log("key for Object",key)
+}
+
+
+//entries:
+let entAns = obj.entries()
+for(let entries of entAns){
+  console.log(entries)           //it return object with key:value pair
+}
+
+//with:
+let mon = ["jan","feb","mar","apr"]
+let answer =mon.with(2,"jubair")                //it is used to update value in the array
+console.log(answer)
+
+
+//spread Operator:
+let jubair=["jubair"]
+let salman =["salman"]             //The ... operator expands an iterable (like an array) into more elements:
+let kasim = ["kassim"]
+let vagitha =["vagitha"]
+const family =[...jubair,...salman, ...kasim,...vagitha]
+console.log(family)
