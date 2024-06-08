@@ -3,6 +3,15 @@ let arr =[1,2,3,4,5,6]
 let rev=arr.reverse()
 console.log(rev)
 
+
+//in function reverse string:
+function reverseString(){
+    s.reverse();
+    return s;
+}
+let s =["h","e","l","l","o"]
+console.log(reverseString(s))
+
 //reverse the string
 let str="jubair"
 let revr=str.split("").reverse().join("")
@@ -54,3 +63,21 @@ let ma =spl.map(cap)
 let jo =ma.join(" ")
 console.log(jo)
 
+
+//swap two number without using third variable:
+let a=12;
+let b=13;
+[a,b]=[b,a]
+console.log(a)
+console.log(b)
+
+//swap tow numver with third variable:
+let a1=1;
+let b1=2
+let temp=a1;a1=b1;b1=temp
+console.log(a1)
+console.log(b1)
+
+
+
+  
