@@ -78,7 +78,6 @@ console.log(spliced)
 
 
 //Array search method:
-
 //indexOf:
 let string =["a","b","c","d","b"]  //the item is present more than once, it returns the position of the first occurrence.
 let index=string.indexOf("b")
@@ -94,10 +93,10 @@ let list=["jubair","salman","kasi","vagitha"]         //This allows us to check 
 let find=list.includes("salman") 
 console.log(find)                                     //return boolean type data
 
+
 //find:
 const numbers = [4, 9, 16, 25, 29];
-let first = numbers.find(myFunction);                       //The find() method returns the value of the first array element that passes a test function.
-                                                            //This example finds (returns the value of) the first element that is larger than 18:
+let first = numbers.find(myFunction);                 //The find() method returns the value of the first array element that passes a test function.                                                          //This example finds (returns the value of) the first element that is larger than 18:
 function myFunction(value, index, array) {
   return value > 18;
 }
@@ -105,22 +104,23 @@ console.log(first)
 
 
 //findIndex
-const numberss = [4, 9, 16, 25, 29];
+const numberss = [4, 9, 16, 25, 29];               //it is used to returns the index of the first array element that passes a test function.
 let firsts = numbers.findIndex(myFunction);
-
 function myFunction(value, index, array) {
   return value > 18;
 }
 console.log(firsts)
 
-//findlast:
 
-const temps = [27, 28, 30, 40, 42, 35, 30];
-let high = temps.findLast(x => x > 40);
+//findlast:
+const temps = [27, 28, 30, 40, 42, 35, 30];   //it method that will start from the end of an array and return the value of the first element that satisfies a condition.
+let high = temps.findLast(x => x > 40);                         
 console.log(temps)
 
-//findLasstIndex:
-const temp = [27, 28, 30, 40, 42, 35, 30];
+
+
+//findLastIndex:
+const temp = [27, 28, 30, 40, 42, 35, 30];    //it is used to finds the index of the last element that satisfies a condition.
 let pos = temp.findLastIndex(x => x > 40);
 console.log(pos)
 
