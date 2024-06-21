@@ -100,6 +100,8 @@
 // let nums=[0,1,2,3,4,4,5,5,5]
 // console.log(Dup(nums))
 
+
+//pattern program
 for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
         process.stdout.write("* ");
