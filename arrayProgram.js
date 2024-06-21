@@ -79,14 +79,53 @@
 // console.log(b1)
 
 
-let a=[1,2,3,4,5,6]
-for(let i=0;i<a.length;i++){
-    console.log(i)
+// let a=[1,2,3,4,5,6]
+// for(let i=0;i<a.length;i++){
+//     console.log(i)
+// }
+// for(let j=6;j>1;j--){
+//     console.log(j)
+// }
+
+
+// function Dup(nums){
+//     let j=0;
+//     for(let i=1;i=nums.length;i++){
+//         if(nums[i]!==nums[j]){
+//             nums[j++]=nums[i]
+//         }
+//     }
+//     return j++
+// }
+// let nums=[0,1,2,3,4,4,5,5,5]
+// console.log(Dup(nums))
+
+for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+        process.stdout.write("* ");
+    }
+    console.log(); 
 }
-for(let j=6;j>1;j--){
-    console.log(j)
+
+for(let i=0;i<5;i++){
+    for(let j=0;j<=i;j++){
+        process.stdout.write("* ")
+    }
+    console.log()
 }
 
 
+for(let i=1;i<=5;i++){
+    for(j=1;j<=i;j++){
+        process.stdout.write(j.toString())
+    }
+    console.log()
+}
 
-  
+
+for(let i=1;i<=5;i++){
+    for(j=1;j<=i;j++){
+        process.stdout.write(i.toString())
+    }
+    console.log()
+}
