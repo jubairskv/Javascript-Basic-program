@@ -141,3 +141,49 @@ function pattern(n){
     }
   }
   pattern(6)
+
+  function pattern2() {
+    for(let i=1;i<n;i++){
+        for(let j=1;j<n-i+1;j++){
+            process.stdout.write(j.toString())
+        }
+        console.log()
+    }
+  }
+  pattern2(6)
+
+
+
+  function patern3(n){
+    for(let i=0;i<n;i++){
+      for(let j=0;j<=n-i-1;j++){
+        process.stdout.write(" ")
+      }
+      for(let j=0;j<2*i+1;j++){
+        process.stdout.write("*")
+      }
+       for(let j=0;j<=n-i-1;j++){
+        process.stdout.write(" ")
+      }
+      console.log()
+    }
+  }
+  
+  patern3(6)
+
+
+  function pattern4(n){
+    for(let i=0;i<n;i++){
+      for(let j=0;j<=i;j++){
+        process.stdout.write(" ")
+      }
+      for(let j=0;j<2*n-2*i+1;j++){
+        process.stdout.write("*")
+      }
+       for(let j=0;j<=i;j++){
+        process.stdout.write(" ")
+      }
+      console.log()
+    }
+  }
+  patern4(6)
