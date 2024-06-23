@@ -229,6 +229,7 @@ function pattern7(n) {
 }
 pattern7(6)
 
+
 function pattern8(n){
   let start =1;
   for(let i=0;i<n;i++){
@@ -243,3 +244,34 @@ function pattern8(n){
 }
 pattern8(6)
 
+
+function pattern9(n){
+  let space =2*(n-1);
+  for(let i=0;i<=n;i++){
+    for(let j=0;j<=i;j++){
+      process.stdout.write(j.toString())
+    }
+    for(let j=1;j<=space;j++){
+      process.stdout.write(" ")
+    }
+    for(let j=i;j>=1;j--){
+      process.stdout.write(j.toString())
+    }
+    console.log()
+    space-=2
+  }
+}
+pattern9(6)
+
+function pattern10(n){
+  let num =1
+  for(let i=1;i<=n;i++){
+    for(let j=1;j<=i;j++){
+      process.stdout.write(num.toString()+ " ")
+      num=num+1
+    }
+    console.log()
+  }
+  
+}
+pattern10(5)
