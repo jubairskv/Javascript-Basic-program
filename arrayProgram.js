@@ -242,3 +242,4 @@ function pattern8(n){
   }
 }
 pattern8(6)
+
