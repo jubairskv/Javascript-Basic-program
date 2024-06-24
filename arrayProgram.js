@@ -366,43 +366,79 @@
 
 // pattern18(5);
 
-function pattern19(N) {
-  let spaces = 0;
-  for (let i = 0; i < N; i++) {
-    let row = '';
-    for (let j = 1; j <= N - i; j++) {
-      row += '*';
-    }
-    for (let j = 0; j < spaces; j++) {
-      row += ' ';
-    }
+// function pattern19(N) {
+//   let spaces = 0;
+//   for (let i = 0; i < N; i++) {
+//     let row = '';
+//     for (let j = 1; j <= N - i; j++) {
+//       row += '*';
+//     }
+//     for (let j = 0; j < spaces; j++) {
+//       row += ' ';
+//     }
 
-    for (let j = 1; j <= N - i; j++) {
-      row += '*';
-    }
-    spaces += 2;
-    console.log(row);
-  }
+//     for (let j = 1; j <= N - i; j++) {
+//       row += '*';
+//     }
+//     spaces += 2;
+//     console.log(row);
+//   }
 
-  spaces = 8
-  for (let i = 1; i <= N; i++) {
-    let row = '';
-    for (let j = 1; j <= i; j++) {
-      row += '*';
-    }
-    for (let j = 0; j < spaces; j++) {
-      row += ' ';
-    }
-    for (let j = 1; j <= i; j++) {
-      row += '*';
-    }
+//   spaces = 2*N-2
+//   for (let i = 1; i <= N; i++) {
+//     let row = '';
+//     for (let j = 1; j <= i; j++) {
+//       row += '*';
+//     }
+//     for (let j = 0; j < spaces; j++) {
+//       row += ' ';
+//     }
+//     for (let j = 1; j <= i; j++) {
+//       row += '*';
+//     }
 
-    spaces -= 2;
-    console.log(row);
+//     spaces -= 2;
+//     console.log(row);
+//   }
+// }
+// pattern19(5);
+
+
+// function pattern20(n){
+//   let spaces=2*n-2
+//   for(let i=1;i<=2*n-1;i++){
+//     let row='';
+
+//     let stars=i
+//     if(i>n) stars=2*n-i;
+//     for(let j=1;j<=stars;j++){
+//        row+="*"
+//     }
+//     for(let j=1;j<=spaces;j++){
+//       row+=" "
+//     }
+//     for(let j=1;j<=stars;j++){
+//       row+="*"
+//     }
+//     console.log(row)
+//    if(i<n) spaces -= 2;
+//    else spaces += 2 ;
+//   }
+// }
+// pattern20(5)
+
+function pattern21(n){
+  for(let i=0;i<n;i++){
+    let row=""
+    for(let j=0;j<n;j++){
+      if(i===0 || j===0 || i===n-1 || j===n-1){
+        row+="*"
+      }else{
+        row+=" "
+      }
+    }
+    console.log(row)
   }
 }
-
-pattern19(5);
-
-
+pattern21(5)
 
