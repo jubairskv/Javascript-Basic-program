@@ -272,7 +272,7 @@
 //     }
 //     console.log()
 //   }
-  
+
 // }
 // pattern10(5)
 
@@ -288,15 +288,121 @@
 // }
 // pattern12(5)
 
-function pattern13(n) {
-  for (let i = 0; i < n; i++) {
+// function pattern13(n) {
+//   for (let i = 0; i < n; i++) {
+//     let row = '';
+//     for (let j = 0; j <=i ; j++) {
+//       row += String.fromCharCode(65+j)+""
+//     }
+//     console.log(row);
+//   }
+// }
+
+// pattern13(6);
+
+
+// function pattern14(n){
+//   for(let i=0;i<n;i++){
+//     let alpha=""
+//     for(let j=0;j<=n-i-1;j++){
+//        alpha+=String.fromCharCode(65+j)+" "
+//     }
+//     console.log(alpha)
+//   }
+// }
+// pattern14(5)
+
+
+// function pattern15(n){
+//   for(let i=0;i<n;i++){
+//     let row=""
+//     let ch =String.fromCharCode(65+i);
+//     for(let j=0;j<=i;j++){
+//       row+=ch+" "   //row=row+ch
+
+//     }
+//     console.log(row)
+//   }
+// }
+// pattern15(5)
+
+
+
+
+// function pattern16(N) {
+//   for (let i = 0; i < N; i++) {
+//     let row = '';
+//     for (let j = 0; j < N - i - 1; j++) {
+//       row += ' ';
+//     }
+//     let ch = 'A';
+//     let breakpoint = Math.floor((2 * i + 1) / 2);
+//     for (let j = 1; j <= 2 * i + 1; j++) {
+//       row += ch;
+//       if (j <= breakpoint) {
+//         ch = String.fromCharCode(ch.charCodeAt(0) + 1);
+//       } else {
+//         ch = String.fromCharCode(ch.charCodeAt(0) - 1);
+//       }
+//     }
+//     for (let j = 0; j < N - i - 1; j++) {
+//       row += ' ';
+//     }
+//     console.log(row);
+//   }
+// }
+// pattern16(5);
+
+// function pattern18(n) {
+//   for (let i = 0; i < n; i++) {
+//     let row = '';
+//     let startChar = String.fromCharCode('A'.charCodeAt(0) + n - 1 - i);
+//     for (let ch = startChar; ch <= 'E'; ch = String.fromCharCode(ch.charCodeAt(0) + 1)) {
+//       row += ch + ' ';
+//     }
+//     console.log(row);
+//   }
+// }
+
+// pattern18(5);
+
+function pattern19(N) {
+  let spaces = 0;
+  for (let i = 0; i < N; i++) {
     let row = '';
-    for (let j = 0; j <=n-i-1 ; j++) {
-      row += String.fromCharCode(65+j)+" "
+    for (let j = 1; j <= N - i; j++) {
+      row += '*';
     }
+    for (let j = 0; j < spaces; j++) {
+      row += ' ';
+    }
+
+    for (let j = 1; j <= N - i; j++) {
+      row += '*';
+    }
+    spaces += 2;
+    console.log(row);
+  }
+
+  spaces = 8
+  for (let i = 1; i <= N; i++) {
+    let row = '';
+    for (let j = 1; j <= i; j++) {
+      row += '*';
+    }
+    for (let j = 0; j < spaces; j++) {
+      row += ' ';
+    }
+    for (let j = 1; j <= i; j++) {
+      row += '*';
+    }
+
+    spaces -= 2;
     console.log(row);
   }
 }
 
-pattern13(6);
+pattern19(5);
+
+
 
