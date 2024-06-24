@@ -442,3 +442,17 @@ function pattern21(n){
 }
 pattern21(5)
 
+function pattern21(n){
+  for(let i=0;i<2*n-1;i++){
+    let row=""
+    for(let j=0;j<2*n-1;j++){
+      let top=i;
+      let left=j;
+      let right =(2*n-2)-j
+      let down=(2*n-2)-i
+      row+=(n-Math.min(Math.min(top,down),Math.min(left,right)))+" "
+    }
+    console.log(row)
+  }
+}
+pattern21(5)
