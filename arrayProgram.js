@@ -442,6 +442,7 @@ function pattern21(n){
 }
 pattern21(5)
 
+
 function pattern21(n){
   for(let i=0;i<2*n-1;i++){
     let row=""
