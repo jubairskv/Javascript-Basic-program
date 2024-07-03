@@ -35,6 +35,8 @@ function Reverse(n){
 Reverse(122897)
 
 
+
+
 //Check palindrom:
 function Reverse(n){
    let ReverseNumber=0
@@ -52,3 +54,5 @@ let  dup=n;
     }              // console.log(ReverseNumber)        //return reversNumber
 }
 console.log(Reverse(121))
+
+
