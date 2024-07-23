@@ -62,3 +62,33 @@ function amstrong(n) {
   }
 }
 console.log(amstrong(371))
+
+
+//print all divisors:
+//method 1:
+function allDivisores(n){
+  for(let i=0;i<=n;i++){
+    if(n%i == 0){
+      console.log("Divisores:",i)
+    }
+  }
+}
+allDivisores(6)
+
+//method 2:
+function div(n){
+  let array=[]
+  //6*6 =36
+  //7*7 <= 36 false
+  for(let i=1;i*i<=n;i++){
+    if(n%i ===0){
+      array.push(i)
+      if(n/i !=i){
+        array.push(n/i)
+      }
+    }
+  }
+  return array.sort((a,b)=>a-b)
+}
+console.log(div(36).join(" "))
+
