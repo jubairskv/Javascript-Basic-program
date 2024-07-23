@@ -1,16 +1,14 @@
 //Count DIgit -burte force Apporch
-function countDigit(n){
-  let count=0;
-  while (n>0){
-    n=Math.floor(n/10)
-    count++
+function countDigit(n) {
+  let count = 0;
+  while (n > 0) {
+    n = Math.floor(n / 10);
+    count++;
   }
-  return count
+  return count;
 }
-let ans = countDigit(43567)
-console.log(ans)
-
-
+let ans = countDigit(43567);
+console.log(ans);
 
 //CountDigit optimal approch
 function Count(n) {
@@ -21,9 +19,9 @@ console.log(ans1);
 
 //Reverse a number:
 function Reverse(n) {
-  ReverseNumber = 0;
+  let ReverseNumber = 0;
   while (n > 0) {
-    lastDigit = n % 10;
+    let lastDigit = n % 10;
     ReverseNumber = ReverseNumber * 10 + lastDigit;
     n = Math.floor(n / 10);
   }
@@ -32,18 +30,35 @@ function Reverse(n) {
 Reverse(122897);
 
 //Check palindrom:
-function Reverse(n) {
-  let ReverseNumber = 0;
+function checkPalindrom(n) {
+  let reverseNum = 0;
   let dup = n;
   while (n > 0) {
-    lastDigit = n % 10;
-    ReverseNumber = ReverseNumber * 10 + lastDigit;
+    let lastDigit = n % 10;
+    reverseNum = reverseNum * 10 + lastDigit;
     n = Math.floor(n / 10);
   }
-  if (dup === ReverseNumber) {
+  if (dup === reverseNum) {
     return true;
   } else {
     return false;
-  } // console.log(ReverseNumber)        //return reversNumber
+  }
 }
-console.log(Reverse(121));
+console.log(checkPalindrom(121));
+
+//Amstrong Number:
+function amstrong(n) {
+  let sum = 0;
+  let dup = n;
+  while (n > 0) {
+    let lastDigit = n % 10;
+    sum = sum + (lastDigit ** 3);
+    n = Math.floor(n / 10);
+  }
+  if (dup === sum) {
+    return "amstrong number";
+  } else {
+    return "not amstrong number";
+  }
+}
+console.log(amstrong(371))
