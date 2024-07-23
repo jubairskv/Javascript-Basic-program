@@ -1,16 +1,16 @@
 //Count DIgit -burte force Apporch
-function CountDigits(n) {
-  let count = 0;
-  while (n > 0) {
-    n = Math.floor(n / 10);
-    count++;
-    //count=count+1
+function countDigit(n){
+  let count=0;
+  while (n>0){
+    n=Math.floor(n/10)
+    count++
   }
-  return count;
+  return count
 }
-
-const ans = CountDigits(12145)
+let ans = countDigit(43567)
 console.log(ans)
+
+
 
 //CountDigit optimal approch
 function Count(n) {
