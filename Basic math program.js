@@ -1,16 +1,16 @@
-//Count DIgit -burte force Apporch
+//Count Digit -burte force Apporch:
 function countDigit(n) {
   let count = 0;
   while (n > 0) {
-    n = Math.floor(n / 10);
-    count++;
+    n = Math.floor(n / 10); // n/10=43567/10  = math.floor(4356.7) =4356
+    count++; //count=count+1    0+1 =1
   }
   return count;
 }
 let ans = countDigit(43567);
 console.log(ans);
 
-//CountDigit optimal approch
+//CountDigit optimal approach:
 function Count(n) {
   return (log = Math.floor(Math.log10(n) + 1));
 }
@@ -52,7 +52,7 @@ function amstrong(n) {
   let dup = n;
   while (n > 0) {
     let lastDigit = n % 10;
-    sum = sum + (lastDigit ** 3);
+    sum = sum + lastDigit ** 3;
     n = Math.floor(n / 10);
   }
   if (dup === sum) {
@@ -61,34 +61,50 @@ function amstrong(n) {
     return "not amstrong number";
   }
 }
-console.log(amstrong(371))
+console.log(amstrong(371));
 
-
-//print all divisors:
-//method 1:
-function allDivisores(n){
-  for(let i=0;i<=n;i++){
-    if(n%i == 0){
-      console.log("Divisores:",i)
+//print all divisors optimal approach:
+function allDivisores(n) {
+  for (let i = 0; i <= n; i++) {
+    if (n % i == 0) {
+      console.log("Divisores:", i);
     }
   }
 }
-allDivisores(6)
+allDivisores(6);
 
 //method 2:
-function div(n){
-  let array=[]
+function div(n) {
+  let array = [];
   //6*6 =36
   //7*7 <= 36 false
-  for(let i=1;i*i<=n;i++){
-    if(n%i ===0){
-      array.push(i)
-      if(n/i !=i){
-        array.push(n/i)
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      array.push(i);
+      if (n / i != i) {
+        array.push(n / i);
       }
     }
   }
-  return array.sort((a,b)=>a-b)
+  return array.sort((a, b) => a - b);
 }
-console.log(div(36).join(" "))
+console.log(div(36).join(" "));
 
+//check prime or not:
+function isPrime(n) {
+  let count = 0;
+  for (let i = 1; i * i <= n; i++) {
+    if (n / i === 0) {
+      count++;
+      if ((n / i) != i) {
+        count++;
+      }
+    }
+  }
+  if (count === 2) {
+    return "Prime number";
+  } else {
+    return "not prime";
+  }
+}
+console.log(isPrime(1))
