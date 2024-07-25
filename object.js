@@ -122,3 +122,41 @@ console.log(Object.keys(obj[0]));
 obj.forEach((item) => {
   console.log(Object.keys(item));
 });
+
+
+
+let obj2={
+      Name:"jubair",
+      Age:25,
+      DOB:"21/12/199",
+      Add:[
+          {
+              Name:"jubair",
+              Number:1
+          },
+          {
+              Name:"salman",
+              Number:2
+          }
+      ],
+      person:[
+        {
+          Name: "jubair",
+          lastName: "kasim",
+          age: 25,
+        },
+        {
+          Name: "Salman",
+          lastName: "Kasim",
+          age: 27,
+        },
+        {
+          Name: "Vagitha banu",
+          lastName: "Kasim",
+          age: 55,
+        },
+      ]  
+  } 
+
+
+  console.table(Object.values(obj2.per))
