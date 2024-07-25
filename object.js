@@ -1,5 +1,4 @@
 // //javascript object
-
 // const object ={
 //     name:"jubair",
 //     father:"kasim",
