@@ -53,7 +53,6 @@
 //   console.log("normal for loop", arr1[i]);
 // }
 
-
 //Adding an Element in the Middle of an Array In-Place
 let arr = [1, 2, 3, 4, 5];
 let newElement = 99;
@@ -67,9 +66,11 @@ if (index >= 0 && index <= arr.length) {
     console.log(i)
     arr[i] = arr[i - 1];
   }
-  
+
   // Insert the new element
   arr[index] = newElement;
 }
 
 console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
+
+
