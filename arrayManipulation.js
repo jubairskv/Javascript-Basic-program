@@ -16,13 +16,60 @@
 // console.log(arr);
 
 //remove a number from end:
-let arr = [1, 2, 3];
-let newArr = [];
-console.log(newArr)
-for (let i = 0; i < arr.length - 1; i++) {
-  console.log("Before:", arr[i]);
-  newArr[i] = arr[i];
-  console.log("After:", arr[i]);
+// let arr = [1, 2, 3];
+// let newArr = [];
+//console.log(newArr)
+// for (let i = 0; i < arr.length - 1; i++) {
+//   console.log("Before:", arr[i]);
+//   newArr[i] = arr[i];
+//   console.log("After:", arr[i]);
+// }
+// arr = newArr;
+// console.log(arr)
+
+//removing a number from beginning:
+// let arr=[1,2,3];
+// let newArr = [];
+// for (let i=1;i<arr.length;i++){
+//     console.log(arr[i])
+//     newArr[i-1] =  arr[i]
+// }
+// arr = newArr
+// console.log(newArr)
+
+//modifying the element:
+// let arr=[1,2,3,4,5]
+// arr[2]=10
+// console.log(arr)
+
+//iterating over an array:
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// for (let x of arr) {
+//   console.log("for of loop:", x);
+// }
+
+// let arr1=[1,2,3,4,5,6,7,8,9]
+// for (let i = 0; i <arr1.length; i++) {
+//   console.log("normal for loop", arr1[i]);
+// }
+
+
+//Adding an Element in the Middle of an Array In-Place
+let arr = [1, 2, 3, 4, 5];
+let newElement = 99;
+let index = 2; // Position to insert newElement
+
+// Ensure the index is within bounds
+if (index >= 0 && index <= arr.length) {
+  // Shift elements to the right
+  for (let i = arr.length; i > index; i--) {
+    //console.log(arr[i])
+    console.log(i)
+    arr[i] = arr[i - 1];
+  }
+  
+  // Insert the new element
+  arr[index] = newElement;
 }
-arr = newArr; 
-console.log(arr)
+
+console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
