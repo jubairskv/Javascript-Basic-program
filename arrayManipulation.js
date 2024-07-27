@@ -5,7 +5,6 @@
 // console.log(arr)
 
 //add a newnumber in begining:
-
 let arr = [1, 2, 3, 4]; //[0,1,2,3]
 let newElement = 0;
 for (let i = arr.length; i > 0; i--) {
