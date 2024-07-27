@@ -98,17 +98,17 @@
 
 //console.log(arr); // Output: [1, 2, 99, 100, 101, 3, 4, 5]
 
-let arr = [1, 2, 3, 4, 5];
-let newElement = [99, 100, 101];
-let index = 2;
+//Removing Multiple Elements from an Array:
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let startIndex = 2;
+let count = 3;
 
-if (index >= 0 && index <= arr.length) {
-  for (let i = arr.length - 1; i >= index; i--) {
-    console.log(i);
-    arr[i + newElement.length] = arr[i];
+if (startIndex >= 0 && startIndex <= arr.length && count > 0) {
+  for(let i =startIndex; i<arr.length-count;i++){
+    arr[i] =arr[i+count]
+    console.log(arr[i]) 
   }
-  for (let i = 0; i <= index; i++) {
-    arr[index + i] = newElement[i];
-  }
+  arr.length = arr.length-count    
+  //console.log(arr.length -count)   
 }
-console.log(arr);
+console.log(arr)
