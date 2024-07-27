@@ -54,23 +54,46 @@
 // }
 
 //Adding an Element in the Middle of an Array In-Place
-let arr = [1, 2, 3, 4, 5];
-let newElement = 99;
-let index = 2; // Position to insert newElement
+// let arr = [1, 2, 3, 4, 5];
+// let newElement = 99;
+// let index = 2; // Position to insert newElement
+
+// // Ensure the index is within bounds
+// if (index >= 0 && index <= arr.length) {
+//   // Shift elements to the right
+//   for (let i = arr.length; i > index; i--) {
+//     //console.log(arr[i])
+//     console.log(i)
+//     arr[i] = arr[i - 1];
+//   }
+
+//   // Insert the new element
+//   arr[index] = newElement;
+// }
+
+// console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
+
+//Adding Multiple Elements in the Middle of an Array:
+
+let arr = [1, 2, 3, 4, 5]; //        [1,2,99,100,101,3,4,5]
+let newElements = [99, 100, 101];
+let index = 2; // Position to insert newElements
 
 // Ensure the index is within bounds
 if (index >= 0 && index <= arr.length) {
   // Shift elements to the right
-  for (let i = arr.length; i > index; i--) {
-    //console.log(arr[i])
-    console.log(i)
-    arr[i] = arr[i - 1];
+  for (let i = arr.length - 1; i >= index; i--) {
+    //console.log(i)
+    arr[i + newElements.length] = arr[i];
+    // console.log(arr[i + newElements.length])
+    //arr[5+3] = arr[5]
   }
+  // console.log(arr)
 
-  // Insert the new element
-  arr[index] = newElement;
+  // Insert the new elements
+  for (let i = 0; i < newElements.length; i++) {
+    arr[index + i] = newElements[i];
+  }
 }
 
-console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
-
-
+//console.log(arr); // Output: [1, 2, 99, 100, 101, 3, 4, 5]
