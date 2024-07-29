@@ -7,10 +7,10 @@
 //add a newnumber in begining:
 // let arr = [1, 2, 3, 4]; //[0,1,2,3]
 // let newElement = 0;
-// for (let i = arr.length; i > 0; i--) {
-//   console.log("before:", arr[i]);
-//   arr[i] = arr[i - 1];                 //arr[4] = arr[4-1]   //arr[4] =arr[3]  //array number
-//   console.log("after:", arr[i]);
+// for (let i = arr.length; i >= 0; i--) {
+//   //console.log("before:", arr[i]);
+//   arr[i] = arr[i - 1];                 //shifting number : arr[4] = arr[4-1]   //arr[4] =arr[3]  //array number
+//   //console.log("after:", arr[i]);
 // }
 // arr[0] = newElement;
 // console.log(arr);
@@ -18,11 +18,10 @@
 //remove a number from end:
 // let arr = [1, 2, 3];
 // let newArr = [];
-//console.log(newArr)
+// console.log(newArr)
 // for (let i = 0; i < arr.length - 1; i++) {
 //   console.log("Before:", arr[i]);
 //   newArr[i] = arr[i];
-//   console.log("After:", arr[i]);
 // }
 // arr = newArr;
 // console.log(arr)
@@ -37,12 +36,11 @@
 // arr = newArr
 // console.log(newArr)
 
-//modifying the element:
+// //modifying the element:
 // let arr=[1,2,3,4,5]
 // arr[2]=10
 // console.log(arr)
-
-//iterating over an array:
+// //iterating over an array:
 // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // for (let x of arr) {
 //   console.log("for of loop:", x);
@@ -61,24 +59,22 @@
 // // Ensure the index is within bounds
 // if (index >= 0 && index <= arr.length) {
 //   // Shift elements to the right
-//   for (let i = arr.length; i > index; i--) {
+//   for (let i = arr.length; i >= index; i--) {
 //     //console.log(arr[i])
-//     console.log(i)
+//     //console.log(i)
 //     arr[i] = arr[i - 1];
 //   }
 
 //   // Insert the new element
 //   arr[index] = newElement;
 // }
+//  console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
 
-// console.log(arr); // Output: [1, 2, 99, 3, 4, 5]
 
-//Adding Multiple Elements in the Middle of an Array:
-
+// //Adding Multiple Elements in the Middle of an Array:
 // let arr = [1, 2, 3, 4, 5]; //        [1,2,99,100,101,3,4,5]
 // let newElements = [99, 100, 101];
 // let index = 2; // Position to insert newElements
-
 // // Ensure the index is within bounds
 // if (index >= 0 && index <= arr.length) {
 //   // Shift elements to the right
@@ -86,7 +82,7 @@
 //     //console.log(i)
 //     arr[i + newElements.length] = arr[i];
 //     // console.log(arr[i + newElements.length])
-//     //arr[5+3] = arr[5]
+//     //arr[4+3] = arr[4]
 //   }
 //   // console.log(arr)
 
@@ -95,20 +91,19 @@
 //     arr[index + i] = newElements[i];
 //   }
 // }
+// console.log(arr); // Output: [1, 2, 99, 100, 101, 3, 4, 5]
 
-//console.log(arr); // Output: [1, 2, 99, 100, 101, 3, 4, 5]
+// //Removing Multiple Elements from an Array:
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let startIndex = 2;
+// let count = 3;
+// if (startIndex >= 0 && startIndex <= arr.length && count > 0) {
+//   for(let i = startIndex; i<arr.length-count;i++){
+//     arr[i] = arr[i+count]
+//     console.log(arr[i]) 
+//   }
+//   arr.length = arr.length-count    
+//   //console.log(arr.length -count)   
+// }
+// console.log(arr)
 
-//Removing Multiple Elements from an Array:
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let startIndex = 2;
-let count = 3;
-
-if (startIndex >= 0 && startIndex <= arr.length && count > 0) {
-  for(let i =startIndex; i<arr.length-count;i++){
-    arr[i] =arr[i+count]
-    console.log(arr[i]) 
-  }
-  arr.length = arr.length-count    
-  //console.log(arr.length -count)   
-}
-console.log(arr)
