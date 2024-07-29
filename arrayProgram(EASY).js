@@ -27,7 +27,7 @@
 // let arr=[1,1,1,1,4,5,6,7,7,7,7,8,8,8,9]
 // let largest = arr[0];
 // let secondLargest = -infinity;
-// for (let i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {               //Time Complexity : o(n)
 //   if (arr[i] > largest) {
 //     secondLargest = largest;
 //     largest = arr[i];
@@ -41,7 +41,7 @@
 // let arr = [1, 2, 3, 4, 5, 5.6, 7, 7, 7, 8, 9];
 // let smallest = arr[0];
 // let secondSmallest = Infinity;
-// for (let i = 0; i < arr.length; i++) {
+// for (let i = 0; i < arr.length; i++) {                      //Time Complexity : o(n)
 //   if (arr[i] < smallest) {
 //     secondSmallest = smallest;
 //     smallest = arr[i];
