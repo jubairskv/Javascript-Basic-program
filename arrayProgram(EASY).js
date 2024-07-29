@@ -50,3 +50,31 @@
 //   }
 // }
 // console.log(secondSmallest, smallest);
+
+//Check if array is sorted or not:
+// let arr = [1, 2, 3, 4, 3, 5, 6, 7];
+// for (let i = 1; i < arr.length; i++) {                         //! if any erro check take u forward channel in yt
+//   if (arr[i] >= arr[i - 1]) {                     //tc-O(n)  => sc-O(1)
+//   } else {
+//     console.log("false");
+//   }
+// }
+
+//remove duplicate from an array:
+
+function removeDuplicate(arr) {
+  let i = 0;
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      arr[i + 1] = arr[j];
+      i++;
+    }
+  }
+
+  return i + 1;
+}
+let arr = [1, 1, 2, 2, 2, 3, 3, 3, 4, 4,4,4,7,7,7];
+let k = removeDuplicate(arr);
+for (let i = 0; i < k; i++) {
+  console.log(arr[i]);
+}
