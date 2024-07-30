@@ -61,20 +61,24 @@
 // }
 
 //remove duplicate from an array:
+// function removeDuplicate(arr) {
+//   let i = 0;
+//   for (let j = 1; j < arr.length; j++) {
+//     console.log(arr[j]);
+//     if (arr[j] !== arr[i]) {
+//       // a[i] =[1,1,2,2,2,3,3]     a[j]=[1,2,2,2,3,3]
+//       arr[i + 1] = arr[j];
+//       i++;
+//     }
+//   }
 
-function removeDuplicate(arr) {
-  let i = 0;
-  for (let j = 1; j < arr.length; j++) {
-    if (arr[i] !== arr[j]) {
-      arr[i + 1] = arr[j];
-      i++;
-    }
-  }
+//   return i + 1;
+// }
+// let arr = [1, 1, 2, 2, 2, 3, 3];
+// let k = removeDuplicate(arr);
+// for (let i = 0; i < k; i++) {
+//   console.log(arr[i]);
+// }
 
-  return i + 1;
-}
-let arr = [1, 1, 2, 2, 2, 3, 3, 3, 4, 4,4,4,7,7,7];
-let k = removeDuplicate(arr);
-for (let i = 0; i < k; i++) {
-  console.log(arr[i]);
-}
+//find missing number in an array:
+
