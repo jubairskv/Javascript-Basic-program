@@ -1,4 +1,4 @@
-// //Count Digit -burte force Apporch:
+//Count Digit -burte force Apporch:
 // function countDigit(n) {
 //   let count = 0;
 //   while (n > 0) {
@@ -17,19 +17,55 @@
 // let ans1 = Count(1234567);
 // console.log(ans1);
 
-// //Reverse a number:
-// function Reverse(n) {
-//   let ReverseNumber = 0;
-//   while (n > 0) {
-//     let lastDigit = n % 10;
-//     ReverseNumber = ReverseNumber * 10 + lastDigit;
-//     n = Math.floor(n / 10);
-//   }
-//   console.log(ReverseNumber); //return reversNumber
-// }
-// Reverse(122897);
+//Reverse a number:
+var reverse = function (x) {
+  let revN = 0;
+  let isNegative = x < 0;
+  x = Math.abs(x); // Work with the absolute value of x
 
-// //Check palindrom:
+  while (x > 0) {
+    let lastDigit = x % 10;
+    revN = revN * 10 + lastDigit;
+    x = Math.floor(x / 10);
+  }
+
+  if (isNegative) {
+    revN = -revN; // Restore the negative sign if needed
+  }
+
+  return revN;
+};
+
+//console.log(reverse(1534236469)); // Output: -32
+
+//Reverse a number for 64 Digits and -value also:
+var reverse = function (x) {
+  let revN = BigInt(0);
+  let isNegative = x < 0;
+  x = BigInt(Math.abs(x)); // Work with the absolute value of x
+
+  while (x > BigInt(0)) {
+    let lastDigit = x % BigInt(10);
+    revN = revN * BigInt(10) + lastDigit;
+    x = x / BigInt(10);
+  }
+
+  if (isNegative) {
+    revN = -revN; // Restore the negative sign if needed
+  }
+  const MIN_INT = -(2 ** 31);
+  const MAX_INT = 2 ** 31 - 1;
+
+  if (revN < BigInt(MIN_INT) || revN > BigInt(MAX_INT)) {
+    return 0; // Return 0 for overflow/underflow
+  }
+
+  return revN;
+};
+
+console.log(reverse(1534236469));
+
+//Check palindrom:
 // function checkPalindrom(n) {
 //   let reverseNum = 0;
 //   let dup = n;
@@ -96,7 +132,7 @@
 //   for (let i = 1; i * i <= n; i++) {
 //     if (n % i === 0) {
 //       count++;
-//       if ((n / i) != i) {
+//       if (n / i != i) {
 //         count++;
 //       }
 //     }
@@ -107,8 +143,4 @@
 //     return "not prime";
 //   }
 // }
-// console.log(isPrime(1))
-
-
-
-
+// console.log(isPrime(1));
