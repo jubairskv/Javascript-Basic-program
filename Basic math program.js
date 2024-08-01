@@ -35,7 +35,6 @@ var reverse = function (x) {
 
   return revN;
 };
-
 //console.log(reverse(1534236469)); // Output: -32
 
 //Reverse a number for 64 Digits and -value also:
