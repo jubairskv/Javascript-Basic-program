@@ -144,3 +144,12 @@
 // }
 // console.log(isPrime(11));
 
+//Find Odd or Even number :
+function oddorEven(n) {
+  if (n % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+console.log(oddorEven(11));
