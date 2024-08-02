@@ -1,3 +1,20 @@
+
+// //Find Odd or Even number :
+// function oddorEven(n) {
+//   if (n % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+// console.log(oddorEven(11));
+// //find last digit in numbre:
+// function lastDigit(n) {
+//   return n % 10;
+// }
+// console.log(lastDigit(123456));
+
+
 // //Count Digit -burte force Apporch:
 // function countDigit(n) {
 //   let count = 0;
@@ -144,17 +161,3 @@
 // }
 // console.log(isPrime(11));
 
-//Find Odd or Even number :
-function oddorEven(n) {
-  if (n % 2 === 0) {
-    return "Even";
-  } else {
-    return "Odd";
-  }
-}
-console.log(oddorEven(11));
-//find last digit in numbre:
-function lastDigit(n) {
-  return n % 10;
-}
-console.log(lastDigit(123456));
