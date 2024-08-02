@@ -126,39 +126,21 @@
 // console.log(div(36).join(" "));
 
 //check prime or not:
-function isPrime(n) {
-  let count = 0;
-  for (let i = 1; i * i <= n; i++) {
-    if (n % i === 0) {
-      count++;
-      if (n / i != i) {
-        count++;
-      }
-    }
-  }
-  if (count === 2) {
-    return "Prime number";
-  } else {
-    return "not prime";
-  }
-}
-console.log(isPrime(1));
-
-//check prime or not:
 // function isPrime(n) {
 //   let count = 0;
-//   for (let i = 0; i ** i <= n; i++) {
+//   for (let i = 1; i * i <= n; i++) {
 //     if (n % i === 0) {
 //       count++;
 //       if (n / i != i) {
 //         count++;
 //       }
 //     }
-//     if (count === 2) {
-//       return "true";
-//     } else {
-//       return "false";
-//     }
+//   }
+//   if (count === 2) {
+//     return "Prime number";
+//   } else {
+//     return "not prime";
 //   }
 // }
-// console.log(isPrime(1));
+// console.log(isPrime(11));
+
