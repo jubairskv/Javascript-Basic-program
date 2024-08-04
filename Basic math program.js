@@ -177,7 +177,7 @@ function perfectNum(n) {
   for (let i = 1; i * i <= n; i++) {
     if (n % i === 0) {
       sum += i;
-      if (n / i != n) {
+      if (n / i != n) {                   //need to check n not i if u go and see the divisores prblm u check i here need to check n
         sum += n / i;
       }
     }
