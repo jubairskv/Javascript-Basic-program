@@ -169,3 +169,24 @@ function isPrime(n) {
   }
 }
 console.log(isPrime(11));
+
+//perfect number :
+function perfectNum(n) {
+  let sum = 0;
+  let dup = n;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      sum += i;
+      if (n / i != n) {
+        sum += n / i;
+      }
+    }
+  }
+  return sum === dup ? "Perfect Number" : "Not Perfect Number";
+  //   if (sum ===dup) {
+  //     return "Perfect number";
+  //   } else {
+  //     return "Not Perfect Number";
+  //   }
+}
+console.log(perfectNum(4));
