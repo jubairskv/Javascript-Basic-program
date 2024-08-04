@@ -189,4 +189,4 @@ function perfectNum(n) {
   //     return "Not Perfect Number";
   //   }
 }
-console.log(perfectNum(4));
+console.log(perfectNum(7));
