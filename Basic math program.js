@@ -1,12 +1,12 @@
 //Find Odd or Even number :
-function oddorEven(n) {
-  if (n % 2 === 0) {
-    return "Even";
-  } else {
-    return "Odd";
-  }
-}
-console.log(oddorEven(11));
+// function oddorEven(n) {
+//   if (n % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+// console.log(oddorEven(11));
 // //find last digit in numbre:
 // function lastDigit(n) {
 //   return n % 10;
@@ -53,17 +53,16 @@ console.log(oddorEven(11));
 // console.log(reverse(1534236469)); // Output: -32
 
 //Reverse a number only positive value:
-function rev(n) {
-  let revN = 0;
-  while (n > 0) {
-    lastDigit = n % 10;
-    n = Math.floor(n / 10);
-    revN = revN * 10 + lastDigit;
-  }
-  return revN;
-}
-console.log(rev(123456));
-
+// function rev(n) {
+//   let revN = 0;
+//   while (n > 0) {
+//     lastDigit = n % 10;
+//     n = Math.floor(n / 10);
+//     revN = revN * 10 + lastDigit;
+//   }
+//   return revN;
+// }
+// console.log(rev(123456));
 // //Reverse a number for 64 Digits and -value also:
 // var reverse = function (x) {
 //   let revN = BigInt(0);
