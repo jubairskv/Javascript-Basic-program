@@ -63,7 +63,7 @@ function rev(n) {
   return revN;
 }
 console.log(rev(123456));
-//Reverse a number for 64 Digits and -value also:
+//Reverse a number for 64Bit Digits and -value also:
 var reverse = function (x) {
   let revN = BigInt(0);
   let isNegative = x < 0;
