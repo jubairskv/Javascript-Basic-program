@@ -87,7 +87,6 @@ var reverse = function (x) {
 
   return revN;
 };
-
 console.log(reverse(1534236469));
 
 //Check palindrom:
@@ -107,7 +106,7 @@ function checkPalindrom(n) {
 }
 console.log(checkPalindrom(121));
 
-// //Amstrong Number:
+//Amstrong Number:
 function amstrong(n) {
   let sum = 0;
   let dup = n;
@@ -124,7 +123,7 @@ function amstrong(n) {
 }
 console.log(amstrong(371));
 
-// //print all divisors optimal approach:
+//print all divisors optimal approach:
 function allDivisores(n) {
   for (let i = 0; i <= n; i++) {
     if (n % i === 0) {
@@ -134,7 +133,7 @@ function allDivisores(n) {
 }
 allDivisores(36);
 
-// //method 2:
+ //method 2:
 function div(n) {
   let array = [];
   //6*6 =36
@@ -150,7 +149,6 @@ function div(n) {
   return array.sort((a, b) => a - b);
 }
 console.log(div(36).join(" "));
-
 //check prime or not:
 function isPrime(n) {
   let count = 0;
