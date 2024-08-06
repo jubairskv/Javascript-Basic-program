@@ -51,8 +51,8 @@
 // console.log(secondSmallest, smallest);
 
 //Find third largest element in an array:
-let arr = [1, 2, 3, 4, 5, 6, 1, 2, 4, 5, 7];
-let largest = arr[0];
+let arr = [5,2,2];
+let largest = -Infinity;
 let secondLargest = -Infinity;
 let thirdLargest = -Infinity;
 for (let i = 0; i <  arr.length; i++) {
@@ -63,11 +63,11 @@ for (let i = 0; i <  arr.length; i++) {
   }else if(arr[i] < largest && arr[i] > secondLargest){
     thirdLargest= secondLargest
     secondLargest = arr[i]
-  }else if (arr[i] < secondLargest && arr[i] > thirdLargest ){
+  }else if (arr[i] < secondLargest && arr[i] > thirdLargest && arr[i] !== secondLargest ){
     thirdLargest = arr[i]
   }
 }
-console.log(thirdLargest)
+console.log(thirdLargest === -Infinity ? largest : thirdLargest)
 
 
 //Check if array is sorted or not:
