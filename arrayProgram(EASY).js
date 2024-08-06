@@ -51,23 +51,23 @@
 // console.log(secondSmallest, smallest);
 
 //Find third largest element in an array:
-let arr = [5,2,2];
-let largest = -Infinity;
-let secondLargest = -Infinity;
-let thirdLargest = -Infinity;
-for (let i = 0; i <  arr.length; i++) {
-  if (arr[i] > largest) {
-    thirdLargest=secondLargest
-    secondLargest=largest
-    largest= arr[i]
-  }else if(arr[i] < largest && arr[i] > secondLargest){
-    thirdLargest= secondLargest
-    secondLargest = arr[i]
-  }else if (arr[i] < secondLargest && arr[i] > thirdLargest && arr[i] !== secondLargest ){
-    thirdLargest = arr[i]
-  }
-}
-console.log(thirdLargest === -Infinity ? largest : thirdLargest)
+// let arr = [5,2,2];
+// let largest = -Infinity;
+// let secondLargest = -Infinity;
+// let thirdLargest = -Infinity;
+// for (let i = 0; i <  arr.length; i++) {
+//   if (arr[i] > largest) {
+//     thirdLargest=secondLargest
+//     secondLargest=largest
+//     largest= arr[i]
+//   }else if(arr[i] < largest && arr[i] > secondLargest){
+//     thirdLargest= secondLargest
+//     secondLargest = arr[i]
+//   }else if (arr[i] < secondLargest && arr[i] > thirdLargest && arr[i] !== secondLargest ){
+//     thirdLargest = arr[i]
+//   }
+// }
+// console.log(thirdLargest === -Infinity ? largest : thirdLargest)
 
 
 //Check if array is sorted or not:
