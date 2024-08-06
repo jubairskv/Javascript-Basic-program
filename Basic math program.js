@@ -12,7 +12,6 @@ function lastDigit(n) {
   return n % 10;
 }
 console.log(lastDigit(123456));
-
 //Count Digit -burte force Apporch:
 function countDigit(n) {
   let count = 0;
@@ -24,14 +23,12 @@ function countDigit(n) {
 }
 let ans = countDigit(43567);
 console.log(ans);
-
 //CountDigit optimal approach:
 function Count(n) {
   return (log = Math.floor(Math.log10(n) + 1));
 }
 let ans1 = Count(1234567);
 console.log(ans1);
-
 //Reverse a number:
 var reverse = function (x) {
   let revN = 0;
@@ -51,7 +48,6 @@ var reverse = function (x) {
   return revN;
 };
 console.log(reverse(1534236469)); // Output: -32
-
 //Reverse a number only positive value:
 function rev(n) {
   let revN = 0;
