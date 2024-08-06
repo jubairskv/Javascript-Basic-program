@@ -88,7 +88,6 @@ var reverse = function (x) {
   return revN;
 };
 console.log(reverse(1534236469));
-
 //Check palindrom:
 function checkPalindrom(n) {
   let reverseNum = 0;
