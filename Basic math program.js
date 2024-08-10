@@ -40,7 +40,6 @@ var reverse = function (x) {
     revN = revN * 10 + lastDigit;
     x = Math.floor(x / 10);
   }
-
   if (isNegative) {
     revN = -revN; // Restore the negative sign if needed
   }
