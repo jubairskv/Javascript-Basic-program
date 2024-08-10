@@ -21,3 +21,5 @@ function CountDigit(n) {
   return count;
 }
 console.log(CountDigit(78786));
+
+
