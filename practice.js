@@ -61,4 +61,32 @@ function amstrong(n) {
   }
   return sum === dup ? "amstrong" : "not";
 }
-console.log(amstrong(0))
+console.log(amstrong(0));
+
+function allDiv(n) {
+  let arr = [];
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      arr.push(i);
+      if (n / i != i) {
+        arr.push(n / i);
+      }
+    }
+  }
+  return arr.sort((a, b) => a - b);
+}
+console.log(allDiv(6).join(" "));
+
+function isprime(n) {
+  let count = 0;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      count++;
+      if (n / i != i) {
+        count++;
+      }
+    }
+  }
+  return count === 2 ? "prime" : "not";
+}
+console.log(isprime(9))
