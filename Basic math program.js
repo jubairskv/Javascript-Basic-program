@@ -100,7 +100,7 @@ function checkPalindrom(n) {
 }
 console.log(checkPalindrom(121));
 
-//Amstrong Number:
+//Amstrong Number:  3 153, 370, 371, 407
 function amstrong(n) {
   let sum = 0;
   let dup = n;
@@ -162,8 +162,8 @@ function isPrime(n) {
 }
 console.log(isPrime(11));
 
-//perfect number :
-function perfectNum(n) {
+//perfect number : 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900 and 961.
+function perfectNum(n) {                  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect square number
   let sum = 0;
   let dup = n;
   for (let i = 1; i * i <= n; i++) {
