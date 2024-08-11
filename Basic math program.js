@@ -181,4 +181,4 @@ function perfectNum(n) {                  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect s
   //     return "Not Perfect Number";
   //   }
 }
-console.log(perfectNum(6));
+console.log(perfectNum(2));

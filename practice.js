@@ -89,4 +89,19 @@ function isprime(n) {
   }
   return count === 2 ? "prime" : "not";
 }
-console.log(isprime(9))
+console.log(isprime(9));
+
+function per(n) {
+  let sum = 0;
+  let dup=n
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      sum = sum + i;
+      if (n / i != n) {
+        sum = sum + n / i;
+      }
+    }
+  }
+  return sum === dup ? "perfect" : "not";
+}
+console.log(per(4))
