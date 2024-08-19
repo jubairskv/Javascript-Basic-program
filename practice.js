@@ -154,10 +154,27 @@ function checkPalindrom(n) {
     n = Math.floor(n / 10);
     revNum = revNum * 10 + lastDigit;
   }
- if(revNum===dup){
-  return "pal"
- }else{
-  return "not"
- }
+  if (revNum === dup) {
+    return "pal";
+  } else {
+    return "not";
+  }
 }
-console.log(checkPalindrom(121))
+console.log(checkPalindrom(121));
+
+//amstrong number:
+function amstrong(n) {
+  let sum = 0;
+  let dup = n;
+  while (n > 0) {
+    lastDigit = n % 10;
+    n = Math.floor(n / 10);
+    sum = sum + lastDigit ** 3;
+  }
+  if (sum === dup) {
+    return "amstrong";
+  } else {
+    return "not";
+  }
+}
+console.log(amstrong(153))
