@@ -106,7 +106,7 @@ for (let i = 0; i < k; i++) {
   console.log(arr[i]);
 }
 
-find missing and repeating number in an array:  [brutu force approach]
+//find missing and repeating number in an array:  [brutu force approach]
 function findMissingandrepesting(arr) {
   let repeating = -1;
   let missing = -1;

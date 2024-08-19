@@ -8,7 +8,7 @@ function oddorEven(n) {
 }
 console.log(oddorEven(11));
 //find last digit in numbre:
-function lastDigit(n){
+function lastDigit(n) {
   return n % 10;
 }
 console.log(lastDigit(123456));
@@ -127,7 +127,7 @@ function allDivisores(n) {
 }
 allDivisores(36);
 
- //method 2:
+//method 2:
 function div(n) {
   let array = [];
   //6*6 =36
@@ -163,13 +163,15 @@ function isPrime(n) {
 console.log(isPrime(11));
 
 //perfect number : 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900 and 961.
-function perfectNum(n) {                  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect square number
+function perfectNum(n) {
+  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect square number
   let sum = 0;
   let dup = n;
   for (let i = 1; i * i <= n; i++) {
     if (n % i === 0) {
       sum += i;
-      if (n / i != n) { //need to check n not i if u go and see the divisores prblm u check i here need to check n
+      if (n / i != n) {
+        //need to check n not i if u go and see the divisores prblm u check i here need to check n
         sum += n / i;
       }
     }
@@ -183,4 +185,20 @@ function perfectNum(n) {                  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect s
 }
 console.log(perfectNum(2));
 
-//find sqaure root of the number:
+//find sqaure root of the number:(binary search)
+
+function squareRoot(n) {
+  let low = 1;
+  let high = n;
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    let val = mid * mid;
+    if (val <= n) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+  return high;
+}
+console.log(squareRoot(5))
