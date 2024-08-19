@@ -182,3 +182,5 @@ function perfectNum(n) {                  //1*1=1  2*2=4 3*3=9 4*4=16 -perfect s
   //   }
 }
 console.log(perfectNum(2));
+
+//find sqaure root of the number:
