@@ -177,4 +177,50 @@ function amstrong(n) {
     return "not";
   }
 }
-console.log(amstrong(153))
+console.log(amstrong(153));
+
+//print all Divisore:
+function AllDivisors(n) {
+  let array = [];
+  for (let i = 0; i * i <= n; i++) {
+    if (n % i === 0) {
+      array.push(i);
+      if (n / i !== i) {
+        array.push(n / i);
+      }
+    }
+  }
+  return array.sort((a, b) => a - b);
+}
+console.log(AllDivisors(6));
+
+//check prime or not:
+function PrimeorNot(n) {
+  let count = 0;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      count++;
+      if (n / i !== i) {
+        count++;
+      }
+    }
+  }
+  return count === 2 ? "prime" : "not";
+}
+console.log(PrimeorNot(2));
+
+//perfect square:
+function perfectSquare(n) {
+  let sum = 0;
+  let dup = n;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      sum += i;
+      if (n / i !== i) {
+        sum += i;
+      }
+    }
+  }
+  return sum === dup ? "perfect square" : "Not";
+}
+console.log(perfectSquare(6));
