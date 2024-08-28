@@ -318,4 +318,4 @@ function perfectNumber(n) {
   }
   return sum === dup ? "perfect" : "not";
 }
-console.log(perfectNumber(9));
+console.log(isPrime(9));
