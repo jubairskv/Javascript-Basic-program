@@ -7,11 +7,13 @@ function oddorEven(n) {
   }
 }
 console.log(oddorEven(11));
+
 //find last digit in numbre:
 function lastDigit(n) {
   return n % 10;
 }
 console.log(lastDigit(123456));
+
 //Count Digit -burte force Apporch:
 function countDigit(n) {
   let count = 0;
