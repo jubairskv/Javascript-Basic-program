@@ -268,7 +268,7 @@ console.log(reverseNumber(1234));
 //amstrong number:
 function Amstrong(n) {
   let sum = 0;
-  let dup = 0;
+  let dup = n;
   while (n > 0) {
     let lastDigit = n % 10;
     n = Math.floor(n / 10);
@@ -276,4 +276,4 @@ function Amstrong(n) {
   }
   return dup === sum ? "Amstrong" : "Not";
 }
-console.log(Amstrong(157));
+console.log(Amstrong(153));
