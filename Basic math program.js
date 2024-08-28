@@ -188,7 +188,6 @@ function perfectNum(n) {
 console.log(perfectNum(2));
 
 //find sqaure root of the number:(binary search)
-
 function squareRoot(n) {
   let low = 1;
   let high = n;

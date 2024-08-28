@@ -224,3 +224,6 @@ function perfectSquare(n) {
   return sum === dup ? "perfect square" : "Not";
 }
 console.log(perfectSquare(6));
+
+
+//
