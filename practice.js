@@ -106,7 +106,126 @@
 // }
 // console.log(per(4));
 
-//oddor evn:
+// //oddor evn:
+// function OddorEven(n) {
+//   if (n % 2 === 0) {
+//     return "Even";
+//   } else {
+//     return "Odd";
+//   }
+// }
+// console.log(OddorEven(2));
+
+// //find lastDigit:
+// function lastDigit(n) {
+//   return n % 10;
+// }
+// console.log(lastDigit(12234));
+
+// //CountDigit:
+// function countDigit(n) {
+//   let count = 0;
+//   while (n > 0) {
+//     n = Math.floor(n / 10);
+//     count++;
+//   }
+//   return count;
+// }
+// console.log(countDigit(12345));
+
+// //reverse number:
+// function revNum(n) {
+//   let rev = 0;
+//   while (n > 0) {
+//     lastDigit = n % 10;
+//     n = Math.floor(n / 10);
+//     rev = rev * 10 + lastDigit;
+//   }
+//   return rev;
+// }
+// console.log(revNum(45678));
+
+// //check palindrom:
+// function checkPalindrom(n) {
+//   let revNum = 0;
+//   let dup = n;
+//   while (n > 0) {
+//     lastDigit = n % 10;
+//     n = Math.floor(n / 10);
+//     revNum = revNum * 10 + lastDigit;
+//   }
+//   if (revNum === dup) {
+//     return "pal";
+//   } else {
+//     return "not";
+//   }
+// }
+// console.log(checkPalindrom(121));
+
+// //amstrong number:
+// function amstrong(n) {
+//   let sum = 0;
+//   let dup = n;
+//   while (n > 0) {
+//     lastDigit = n % 10;
+//     n = Math.floor(n / 10);
+//     sum = sum + lastDigit ** 3;
+//   }
+//   if (sum === dup) {
+//     return "amstrong";
+//   } else {
+//     return "not";
+//   }
+// }
+// console.log(amstrong(153));
+
+// //print all Divisore:
+// function AllDivisors(n) {
+//   let array = [];
+//   for (let i = 0; i * i <= n; i++) {
+//     if (n % i === 0) {
+//       array.push(i);
+//       if (n / i !== i) {
+//         array.push(n / i);
+//       }
+//     }
+//   }
+//   return array.sort((a, b) => a - b);
+// }
+// console.log(AllDivisors(6));
+
+// //check prime or not:
+// function PrimeorNot(n) {
+//   let count = 0;
+//   for (let i = 1; i * i <= n; i++) {
+//     if (n % i === 0) {
+//       count++;
+//       if (n / i !== i) {
+//         count++;
+//       }
+//     }
+//   }
+//   return count === 2 ? "prime" : "not";
+// }
+// console.log(PrimeorNot(2));
+
+// //perfect square:
+// function perfectSquare(n) {
+//   let sum = 0;
+//   let dup = n;
+//   for (let i = 1; i * i <= n; i++) {
+//     if (n % i === 0) {
+//       sum += i;
+//       if (n / i !== i) {
+//         sum += i;
+//       }
+//     }
+//   }
+//   return sum === dup ? "perfect square" : "Not";
+// }
+// console.log(perfectSquare(6));
+
+//odd or even:
 function OddorEven(n) {
   if (n % 2 === 0) {
     return "Even";
@@ -114,16 +233,17 @@ function OddorEven(n) {
     return "Odd";
   }
 }
-console.log(OddorEven(2));
+console.log(OddorEven(3));
 
-//find lastDigit:
+//LastDigit
+
 function lastDigit(n) {
   return n % 10;
 }
-console.log(lastDigit(12234));
+console.log(lastDigit(123));
 
-//CountDigit:
-function countDigit(n) {
+//count Digit:
+function CountDigit(n) {
   let count = 0;
   while (n > 0) {
     n = Math.floor(n / 10);
@@ -131,99 +251,18 @@ function countDigit(n) {
   }
   return count;
 }
-console.log(countDigit(12345));
+console.log(CountDigit(123456));
 
-//reverse number:
-function revNum(n) {
-  let rev = 0;
+//Reverse Number:
+function reverseNumber(n) {
+  let revN = 0;
   while (n > 0) {
     lastDigit = n % 10;
     n = Math.floor(n / 10);
-    rev = rev * 10 + lastDigit;
+    revN = revN * 10 + lastDigit;
   }
-  return rev;
+  return revN;
 }
-console.log(revNum(45678));
-
-//check palindrom:
-function checkPalindrom(n) {
-  let revNum = 0;
-  let dup = n;
-  while (n > 0) {
-    lastDigit = n % 10;
-    n = Math.floor(n / 10);
-    revNum = revNum * 10 + lastDigit;
-  }
-  if (revNum === dup) {
-    return "pal";
-  } else {
-    return "not";
-  }
-}
-console.log(checkPalindrom(121));
-
-//amstrong number:
-function amstrong(n) {
-  let sum = 0;
-  let dup = n;
-  while (n > 0) {
-    lastDigit = n % 10;
-    n = Math.floor(n / 10);
-    sum = sum + lastDigit ** 3;
-  }
-  if (sum === dup) {
-    return "amstrong";
-  } else {
-    return "not";
-  }
-}
-console.log(amstrong(153));
-
-//print all Divisore:
-function AllDivisors(n) {
-  let array = [];
-  for (let i = 0; i * i <= n; i++) {
-    if (n % i === 0) {
-      array.push(i);
-      if (n / i !== i) {
-        array.push(n / i);
-      }
-    }
-  }
-  return array.sort((a, b) => a - b);
-}
-console.log(AllDivisors(6));
-
-//check prime or not:
-function PrimeorNot(n) {
-  let count = 0;
-  for (let i = 1; i * i <= n; i++) {
-    if (n % i === 0) {
-      count++;
-      if (n / i !== i) {
-        count++;
-      }
-    }
-  }
-  return count === 2 ? "prime" : "not";
-}
-console.log(PrimeorNot(2));
-
-//perfect square:
-function perfectSquare(n) {
-  let sum = 0;
-  let dup = n;
-  for (let i = 1; i * i <= n; i++) {
-    if (n % i === 0) {
-      sum += i;
-      if (n / i !== i) {
-        sum += i;
-      }
-    }
-  }
-  return sum === dup ? "perfect square" : "Not";
-}
-console.log(perfectSquare(6));
+console.log(reverseNumber(1234));
 
 
-//
