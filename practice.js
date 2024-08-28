@@ -304,3 +304,18 @@ function isPrime(n) {
   return count === 2 ? "prime" : "not";
 }
 console.log(isPrime(2));
+
+function perfectNumber(n) {
+  let sum = 0;
+  let dup = n;
+  for (let i = 1; i * i <= n; i++) {
+    if (n % i === 0) {
+      sum += i;
+      if (n / i != i) {
+        sum += n / i;
+      }
+    }
+  }
+  return sum === dup ? "perfect" : "not";
+}
+console.log(perfectNumber(9));
