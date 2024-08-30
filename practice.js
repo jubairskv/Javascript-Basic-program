@@ -319,3 +319,19 @@ function perfectNumber(n) {
   return sum === dup ? "perfect" : "not";
 }
 console.log(isPrime(9));
+
+function squareRoot(n) {
+  let low = 1;
+  let high = n;
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    let val = mid * mid;
+    if(val<=n){
+      low = mid+1
+    }else{
+      high=mid-1
+    }
+  }
+  return high
+}
+console.log(squareRoot(12))
